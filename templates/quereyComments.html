@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0132)https://www.pythonanywhere.com/user/DocumentCommentCollector/files/home/DocumentCommentCollector/mysite/templates/queryComments.html -->
+<html lang="en" class="gr__pythonanywhere_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Comment Collector</title>
+    <link rel="stylesheet" href="./quereyComments_files/styles.css">
+</head>
+<body data-gr-c-s-loaded="true">
+<div class="container">
+    <header>
+        <h1><span>Select A Query</span></h1>
+    </header>
+    <br>
+    <form method="post" action="https://www.pythonanywhere.com/authorQ" enctype="multipart/form-data">
+        <input type="submit" name="googleSignIN" value="Author Query">
+    </form>
+    <br>
+    <form method="post" action="https://www.pythonanywhere.com/commentsByTime" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <label>Enter Date</label>
+                <input type="text" name="Date" placeholder="year-month-day">
+                <label>Enter Time</label>
+                <input type="text" name="Time" placeholder="hr.min.sec.ms">
+                <input type="submit" name="googleSignIN" value="Specific Date">
+            </li>
+
+        </ul>
+    </form>
+    <br>
+    <form method="post" action="https://www.pythonanywhere.com/commentsByQuote" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <label>Search By Keyword</label>
+                <input type="text" name="quote" placeholder="eg. WWII">
+                <input type="submit" value="Submit">
+            </li>
+        </ul>
+    </form>
+    <br>
+    <form method="post" action="https://www.pythonanywhere.com/advancedQuery" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <label>Condition</label>
+                <input type="text" name="condition" placeholder="eg. comments.author.displayName">
+                <label>Value</label>
+                <input type="text" name="value" placeholder="eg. Bob Dillon">
+                <input type="submit" value="Custom Query">
+            </li>
+        </ul>
+    </form>
+    <br>
+    <form methods="get" action="https://www.pythonanywhere.com/storeCommentsAsCSV" enctype="multipart/form-data">
+        <input type="submit" name="googleSignIN" value="Export Comments">
+    </form>
+</div>
+
+</body></html>

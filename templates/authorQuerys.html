@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+    Author: Darren Kelly
+    Student NO: C00191188
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment Collector</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><span>Query By Author</span></h1>
+    </header>
+    <br>
+    <form method=post action="/commentsByAuthor" enctype=multipart/form-data>
+        <ul>
+            <li>
+                <label>Enter Name</label>
+                <input type="text" name="author">
+                <input type=submit name=googleSignIN value="Submit">
+            </li>
+        </ul>
+    </form>
+    <br>
+    <form method=post action="/commentsByAuthorCount" enctype=multipart/form-data>
+        <ul>
+            <li>
+                <label>Enter Name</label>
+                <p>how many times did they comment?</p>
+                <input type="text" name="author">
+                <input type=submit name=googleSignIN value="Submit">
+                {{ count }}
+            </li>
+        </ul>
+    </form>
+</div>
+</body>
+</html>

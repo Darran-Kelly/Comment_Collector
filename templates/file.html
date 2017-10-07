@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)https://www.pythonanywhere.com/user/DocumentCommentCollector/files/home/DocumentCommentCollector/mysite/templates/files.html -->
+<html lang="en" class="gr__pythonanywhere_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Comment Collector</title>
+    <link rel="stylesheet" href="./files_files/styles.css">
+</head>
+<body data-gr-c-s-loaded="true">
+    <div class="container">
+       <header>
+            <h1><span>Your Files</span></h1>
+        </header>
+
+        <div style="float: left; width: 600px;">
+            <ol>
+                {% for i in filesN %}
+                    <li>{{ i }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+
+        <div style="float: left; width: 600px;">
+            <ol>
+                <form method="post" action="https://www.pythonanywhere.com/displayComments" enctype="multipart/form-data">
+                    {% for i in filesID %}
+                        <li>
+                            <input action="/displayComments" value="{{ i }}" type="submit" name="button">
+                        </li>
+                    {% endfor %}
+                </form>
+            </ol>
+        </div>
+
+        <div>
+            <form action="https://www.pythonanywhere.com/displayURL" method="post" enctype="multipart/form-data">
+                <label>Enter url For Certain File</label>
+                <input type="text" name="url">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+
+</body></html>
